@@ -1,11 +1,12 @@
-# Node Traceur Starter
+# Mumble server
 
-Node starter project that uses traceur compiler.
+A hacky solution to syncing youtube videos with a mumble server
 
-##Use
 
-1. `npm install`
-2. Write app with `app/index.js` as the entry point, use ES6 everywhere
-3. `npm run start`
+## API Endpoints
 
-Refrain from using ES6 in `bootstrap.js` and `config/setup.js`
+	api/    scrape/ params:[video]   #scrapes download link of a video
+	api/    channels/                #list channels
+
+	mumble/connect/                 #establishes socket connection to mumble
+

@@ -1,5 +1,7 @@
 import mumble from "mumble";
 import buildChannelTree from "../utils/buildChannelTree";
+import express from "express";
+import videodl from "./videodl";
 
 var options = {
 	key: "",
@@ -80,5 +82,8 @@ mumble.connect("mumble://104.196.9.223", options, function ( error, connection )
 });
 
 export function run() {
-	console.log("fucking lol");
+	var app = express();
+	// respond with "hello world" when a GET request is made to the homepage
+	app.use("/videodl", videodl);
+	app.listen(3000);
 }
